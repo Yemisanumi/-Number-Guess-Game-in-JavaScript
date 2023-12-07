@@ -2,7 +2,7 @@ function generateRandomNumber () {
     return Math.floor(Math.random() * 100) + 1;
 }
 let randomNumber = generateRandomNumber ();
-let trials =0
+let trials =5
 
 function checkGuess() {
   const userGuessElement = document.getElementById('userGuess');
@@ -12,11 +12,11 @@ function checkGuess() {
   trials++;
 
   if (userGuess < randomNumber) {
-    outcomeElement.textContent = 'Too low! Try again.';
+    outcomeElement.textContent = 'Too low! Keep trying.';
   } else if (userGuess > randomNumber) {
-    outcomeElement.textContent = 'Too high! Try again.';
+    outcomeElement.textContent = 'Too high! Keep trying.';
   } else {
-    outcomeElement.textContent = 'Congrats! You guessed the correct number';
+    outcomeElement.textContent = 'Congrats! Correct';
     userGuessElement.disabled = true;
 }
 }
