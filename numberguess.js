@@ -2,7 +2,7 @@ function generateRandomNumber () {
     return Math.floor(Math.random() * 100) + 1;
 }
 let randomNumber = generateRandomNumber ();
-let trials =5
+let trials =0
 
 function checkGuess() {
   const userGuessElement = document.getElementById('userGuess');
